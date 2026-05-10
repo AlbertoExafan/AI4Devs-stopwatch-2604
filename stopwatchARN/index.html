@@ -1,13 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Timer and Countdown</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Cronómetro y Cuenta Atrás</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Timer and Countdown</h1>
+
+<!-- PANTALLA INICIAL -->
+<div id="menu" class="centered">
+    <h1>Elige una opción</h1>
+    <button onclick="showCountdown()">Cuenta Atrás</button>
+    <button onclick="showStopwatch()">Cronómetro</button>
+</div>
+
+<!-- CUENTA ATRÁS -->
+<div id="countdown-screen" class="hidden">
+    <div id="display" class="display">00:00:00:000</div>
+
+    <div class="keypad">
+        <button onclick="pressNum(5)">5</button>
+        <button onclick="pressNum(6)">6</button>
+        <button onclick="pressNum(7)">7</button>
+        <button onclick="pressNum(8)">8</button>
+        <button onclick="pressNum(9)">9</button>
+        
+        <button onclick="pressNum(0)">0</button>
+        <button onclick="pressNum(1)">1</button>
+        <button onclick="pressNum(2)">2</button>
+        <button onclick="pressNum(3)">3</button>
+        <button onclick="pressNum(4)">4</button>
+
+        <button class="set" onclick="setCountdown()">Set</button>
+        <button class="clear" onclick="clearAll()">Clear</button>
+    </div>
+</div>
+
+<!-- CRONÓMETRO (placeholder) -->
+<div id="stopwatch-screen" class="hidden">
+    <h2>Cronómetro (pendiente de implementar)</h2>
+    <button onclick="goBack()">Volver</button>
+</div>
+
 <script src="script.js"></script>
+
 </body>
 </html>
