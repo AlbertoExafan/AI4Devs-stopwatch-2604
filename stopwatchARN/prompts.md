@@ -19,7 +19,17 @@ faltaría poner un botón, en la parte inferior de los botones de números y de 
 
 ------------------------------------------------
 
-
+Implementa el cronómetro siguiendo el mismo patrón que la cuenta atrás. Al pulsar el botón del cronómetro, debe ocultarse el menú principal y mostrarse un display con el mismo estilo que el de la cuenta atrás, junto con dos botones: "start" y "clear". El botón "start" debe iniciar el cronómetro y cambiar su texto a "stop" mientras esté en marcha. Al pulsar "stop", el cronómetro debe detenerse manteniendo el tiempo actual y el texto del botón debe volver a "start". El botón "clear" debe poner el cronómetro a 0, detenerlo si estaba en marcha y asegurarse de que el botón principal vuelva a mostrar "start". Asegúrate de limpiar correctamente cualquier intervalo/timer activo al detener o reiniciar el cronómetro.
 
 ------------------------------------------------
+
+Por último, ajusta el comportamiento del botón “Set” durante la cuenta atrás para que funcione igual que el botón del cronómetro.
+
+Cuando la cuenta atrás esté en marcha, el botón “Set” debe cambiar su texto a “Stop”.
+
+Si el usuario pulsa el botón mientras muestra “Stop”, la cuenta atrás debe pausarse en el tiempo restante actual y el texto del botón debe cambiar a “Continue”.
+
+Si el usuario pulsa el botón mientras muestra “Continue”, la cuenta atrás debe reanudarse exactamente desde el punto en el que se había pausado, y el texto del botón debe volver a cambiar a “Stop”.
+
+Asegúrate de que este comportamiento solo afecte a la cuenta atrás y no rompa el funcionamiento actual del cronómetro.
 

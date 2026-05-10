@@ -49,3 +49,37 @@ body {
     border-radius: 8px;
     cursor: pointer;
 }
+
+.sw-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    margin-bottom: 15px;
+}
+
+.sw-buttons button {
+    font-size: 20px;
+    padding: 12px;
+    width: 100%;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.sw-buttons button:nth-child(2) {
+    background: #bdc3c7;
+    color: black;
+}
+
+#back-sw-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 22px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

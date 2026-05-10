@@ -34,8 +34,14 @@
 
         <button onclick="pressNum(0)" class="zero">0</button>
 
-        <button class="set" onclick="setCountdown()">Set</button>
-        <button class="clear" onclick="clearAll()">Clear</button>
+        <div class="keypad">
+            <!-- ... tus botones numéricos ... -->
+        
+            <button id="cd-set" class="set" onclick="toggleCountdown()">
+                Set
+            </button>
+            <button class="clear" onclick="clearAll()">Clear</button>
+        </div>
     </div>
 
     <!-- Aquí el nuevo botón -->
@@ -46,8 +52,16 @@
 
 <!-- CRONÓMETRO -->
 <div id="stopwatch-screen" class="hidden">
-    <h2>Cronómetro (pendiente de implementar)</h2>
-    <button onclick="goBack()">Volver</button>
+    <div id="stop-display" class="display">00:00:00:000</div>
+
+    <div class="sw-buttons">
+        <button id="sw-start" onclick="toggleStopwatch()">Start</button>
+        <button onclick="clearStopwatch()">Clear</button>
+    </div>
+
+    <button id="back-sw-btn" onclick="backToMenuFromSw()">
+        ← Volver
+    </button>
 </div>
 
 <script src="script.js"></script>
