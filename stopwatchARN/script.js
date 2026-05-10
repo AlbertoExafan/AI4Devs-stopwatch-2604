@@ -17,6 +17,16 @@ let swStartTime;
 let swElapsed = 0;   // milisegundos acumulados
 let isRunning = false;
 
+// ===== FUNCIONES PARA BLOQUEAR / DESBLOQUEAR BOTONES NUMÉRICOS =====
+function disableNumberButtons() {
+    const btns = document.querySelectorAll(".keypad button:not(#cd-set):not(.clear)");
+    btns.forEach(btn => btn.disabled = true);
+}
+
+function enableNumberButtons() {
+    const btns = document.querySelectorAll(".keypad button:not(#cd-set):not(.clear)");
+    btns.forEach(btn => btn.disabled = false);
+}
 
 // ===== PANTALLAS =====
 function showCountdown() {
@@ -38,7 +48,7 @@ function goBack() {
 
 // ===== CUENTA ATRÁS =====
 
-// Actualiza visual desde array digits
+// Mostrar desde array digits
 function updateCdDisplayFromDigits() {
     let h = digits[0] + digits[1];
     let m = digits[2] + digits[3];
@@ -48,13 +58,15 @@ function updateCdDisplayFromDigits() {
         `${h}:${m}:${s}:${ms}`;
 }
 
+// Presionar número
 function pressNum(n) {
-    if (cdRunning) return;  // si está en marcha, no permitir num
+    if (cdRunning) return;  // bloquear numéricos si está corriendo
     digits.shift();
     digits.push(n + "");
     updateCdDisplayFromDigits();
 }
 
+// Set / Stop / Continue
 function toggleCountdown() {
     const btn = document.getElementById("cd-set");
 
@@ -78,6 +90,8 @@ function toggleCountdown() {
             cdRunning = true;
             btn.innerText = "Stop";
 
+            disableNumberButtons(); // bloquear numéricos
+
             cdEndTime = Date.now() + totalMs;
             startCdInterval();
         }
@@ -85,6 +99,8 @@ function toggleCountdown() {
         // está corriendo → pausar
         pauseCountdown();
         btn.innerText = "Continue";
+
+        enableNumberButtons(); // desbloquear numéricos
     }
 }
 
@@ -99,6 +115,9 @@ function startCdInterval() {
             cdRunning = false;
             cdRemaining = 0;
             document.getElementById("cd-set").innerText = "Set";
+
+            enableNumberButtons(); // desbloquear
+
             alert("¡Tiempo terminado!");
             clearAll();
             return;
@@ -133,6 +152,8 @@ function clearAll() {
     cdRunning = false;
     document.getElementById("display").innerText = "00:00:00:000";
     document.getElementById("cd-set").innerText = "Set";
+
+    enableNumberButtons(); // desbloquear
 }
 
 function backToMenu() {
