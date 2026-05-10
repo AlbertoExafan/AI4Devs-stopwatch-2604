@@ -10,3 +10,8 @@ Escribe el código, suponiendo que hay un fichero index.html y un fichero script
 
 
 ------------------------------------------------
+
+los botones que me has dado están desordenados. Van del 5 al 9, y después del 0 al 4. Ponlos ordenados del 0 al 9.
+
+------------------------------------------------
+
