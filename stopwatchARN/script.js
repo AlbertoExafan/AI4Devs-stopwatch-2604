@@ -86,3 +86,10 @@ function startCountdown(ms) {
 function pad(num, len) {
     return num.toString().padStart(len, "0");
 }
+
+function backToMenu() {
+    clearInterval(interval);   // detiene cualquier countdown activo
+    clearAll();                // resetea a 0
+    document.getElementById("countdown-screen").classList.add("hidden");
+    document.getElementById("menu").classList.remove("hidden");
+}

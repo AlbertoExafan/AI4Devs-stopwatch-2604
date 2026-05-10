@@ -36,3 +36,16 @@ body {
     background: #bdc3c7;
     color: black;
 }
+
+#back-btn {
+    width: 100%;       /* ocupa todo el ancho del contenedor */
+    display: block;     /* asegura que se comporte a nivel de bloque */
+    padding: 15px;
+    margin-top: 15px; 
+    font-size: 22px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

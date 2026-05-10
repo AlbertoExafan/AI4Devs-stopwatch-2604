@@ -15,3 +15,11 @@ los botones que me has dado están desordenados. Van del 5 al 9, y después del 
 
 ------------------------------------------------
 
+faltaría poner un botón, en la parte inferior de los botones de números y de set y clear, que permita volver a la vista anterior de selección de cronómetro o cuentra atrás. El botón tiene que ocupar todo el ancho del resto de elementos, con el texto "Volver" y tener una flecha hacia la izquierda para indicar que se volverá hacia atrás al ser pulsado. Al pulsarlo tiene que resetear la cuenta atrás a todo "0"s.
+
+------------------------------------------------
+
+
+
+------------------------------------------------
+
